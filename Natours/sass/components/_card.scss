@@ -11,7 +11,7 @@
         top                : 0;
         width              : 100%;
         height             : 52rem;
-        border-radius      : 3px;
+        border-radius      : $border-radius-small;
         overflow           : hidden;
         box-shadow         : 0 1.5rem 4rem rgba($color-black, .15);
         backface-visibility: hidden;
@@ -49,8 +49,8 @@
     // Front-side
     &__picture {
         height                 : 23rem;
-        border-top-left-radius : 3px;
-        border-top-right-radius: 3px;
+        border-top-left-radius : $border-radius-small;
+        border-top-right-radius: $border-radius-small;
         background-size        : cover;
         background-blend-mode  : screen;
         -webkit-clip-path      : polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -130,12 +130,9 @@
 
     // Back-side
     &__cta {
-        position  : absolute;
-        left      : 50%;
-        top       : 50%;
+        @include absCenter;
         width     : 90%;
         text-align: center;
-        transform : translate(-50%, -50%);
     }
 
     &__price-box {

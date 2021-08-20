@@ -1,5 +1,7 @@
 .btn {
 
+    &,
+    // Change for <button> element
     &:link,
     &:visited {
         position       : relative;
@@ -10,6 +12,10 @@
         text-decoration: none;
         border-radius  : 10rem;
         transition     : all .2s;
+
+        // Change for <button> element
+        border: none;
+        cursor: pointer;
     }
 
     &::after {
@@ -29,21 +35,23 @@
         transform : translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
-        &:after {
+        &::after {
             content  : '';
             opacity  : 0;
             transform: scaleX(1.4) scaleY(1.6);
         }
     }
 
-    &:active {
+    &:active,
+    &:focus {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
         transform : translateY(-1px);
-        box-shadow: 0 .5 1rem rgba($color-black, .2);
+        outline   : none;
     }
 
     &--white {
         background-color: $color-white;
-        color           : $color-grey-dark;
+        color           : $color-grey-dark-1;
 
         &::after {
             content         : '';

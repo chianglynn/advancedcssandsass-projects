@@ -8,7 +8,8 @@ $color-tertiary-light : #2998ff;
 $color-tertiary-dark  : #5643fa;
 $color-white          : #fff;
 $color-black          : #000;
-$color-grey-dark      : #777;
+$color-grey-dark-1    : #777;
+$color-grey-dark-2    : #999;
 $color-grey-light-1   : #f7f7f7;
 $color-grey-light-2   : #eee;
 
@@ -19,3 +20,6 @@ $gutter-horizontal: 6rem;
 
 // Font-size
 $default-font-size: 1.6rem;
+
+// Border-radius
+$border-radius-small:3px;

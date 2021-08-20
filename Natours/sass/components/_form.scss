@@ -1,0 +1,90 @@
+.form {
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        display         : block;
+        padding         : 1.5rem 2rem;
+        width           : 90%;
+        font-family     : inherit;
+        font-size       : 1.5rem;
+        color           : inherit;
+        border          : none;
+        border-bottom   : 3px solid transparent;
+        border-radius   : $border-radius-small;
+        background-color: rgba($color-white, .5);
+        transition      : all .3s;
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+        }
+
+        &:focus {
+            border-bottom: 3px solid $color-primary;
+            box-shadow   : 0 1rem 2rem rgba($color-black, .1);
+            outline      : none;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+    }
+
+    &__label {
+        display    : block;
+        margin     : .7rem 0 0 2rem;
+        font-size  : 1.2rem;
+        font-weight: 700;
+        transition : all .3s;
+    }
+
+    &__input:placeholder-shown+&__label {
+        transform : translateY(-4rem);
+        opacity   : 0;
+        visibility: hidden;
+    }
+
+    &__radio-group {
+        display: inline-block;
+        width  : 49%;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-input:checked+&__radio-label &__radio-button::after {
+        opacity: 1;
+    }
+
+    &__radio-label {
+        position    : relative;
+        padding-left: 4.5rem;
+        font-size   : $default-font-size;
+        cursor      : pointer;
+    }
+
+    &__radio-button {
+        position     : absolute;
+        left         : 0;
+        top          : -.4rem;
+        display      : inline-block;
+        width        : 3rem;
+        height       : 3rem;
+        border       : 5px solid $color-primary;
+        border-radius: 50%;
+
+        &::after {
+            content: '';
+            display: block;
+            @include absCenter;
+            width           : 1.3rem;
+            height          : 1.3rem;
+            border-radius   : 50%;
+            background-color: $color-primary;
+            opacity         : 0;
+            transition      : opacity .2s;
+        }
+    }
+}

@@ -3,7 +3,7 @@
     margin          : 0 auto;
     width           : 75%;
     font-size       : $default-font-size;
-    border-radius   : 3px;
+    border-radius   : $border-radius-small;
     background-color: rgba($color-white, .6);
     box-shadow      : 0 3rem 6rem rgba($color-black, .1);
     transform       : skewX(-12deg);
@@ -29,9 +29,7 @@
     }
 
     &__caption {
-        position           : absolute;
-        left               : 50%;
-        top                : 50%;
+        @include absCenter;
         font-size          : 1.7rem;
         color              : $color-white;
         text-align         : center;
