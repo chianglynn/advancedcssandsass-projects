@@ -15,11 +15,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
-/*
-@include respond(tab-land) {}
-@include respond(tab-port) {}
-@include respond(big-desktop) {}
-*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
