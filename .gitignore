@@ -1,5 +1,8 @@
 .DS_Store
 .vscode
+style.comp.css
+style.concat.css
+style.prefix.css
 
 # Logs
 logs
