@@ -21,6 +21,9 @@
 }
 
 .sidebar {
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
     flex            : 0 0 18%;
     background-color: var(--color-grey-dark-1);
 }
