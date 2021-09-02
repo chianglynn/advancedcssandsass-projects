@@ -3,6 +3,7 @@
   --color-primary-rgb: 196, 152, 99;
   --color-primary-dark: #B28451;
   --color-secondary: #101d2c;
+  --color-secondary-rgb: 16, 29, 44;
   --color-grey-light-1: #f9f7f6;
   --color-grey-light-2: #aaa;
   --color-grey-dark-1: #54483A;
@@ -37,6 +38,11 @@ body {
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: var(--font-display);
   font-weight: 400; }
+
+.heading-1 {
+  line-height: 1;
+  font-size: 4.5rem;
+  color: var(--color-grey-light-1); }
 
 .heading-2 {
   font-size: 4rem;
@@ -114,7 +120,42 @@ body {
 
 .header {
   grid-column: full-start / col-end 6;
-  background-color: var(--color-grey-dark-1); }
+  display: grid;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
+  grid-row-gap: 1.5rem;
+  justify-content: center;
+  padding: 4rem 8rem 8rem;
+  background-color: var(--color-grey-dark-1);
+  background-image: linear-gradient(rgba(var(--color-secondary-rgb), 0.93), rgba(var(--color-secondary-rgb), 0.93)), url("../img/hero.jpeg");
+  background-size: cover;
+  background-position: center; }
+  .header__logo {
+    justify-self: center;
+    height: 3rem; }
+  .header__btn {
+    justify-self: start;
+    align-self: start; }
+  .header__seenon-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    align-items: center;
+    font-size: 1.6rem;
+    color: var(--color-grey-light-2); }
+    .header__seenon-text::before, .header__seenon-text::after {
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: currentColor; }
+  .header__seenon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3rem;
+    justify-items: center; }
+    .header__seenon-logos img {
+      height: 2.5rem;
+      filter: brightness(0.7); }
 
 .realtors {
   grid-column: col-start 7 / full-end;
