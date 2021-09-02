@@ -31,6 +31,17 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: var(--font-display);
+  font-weight: 400; }
+
+.heading-4 {
+  font-size: 1.9rem; }
+  .heading-4--light {
+    color: var(--color-grey-light-1); }
+  .heading-4--dark {
+    color: var(--color-grey-dark-1); }
+
 .sidebar {
   grid-row: 1 / -1;
   grid-column: sidebar-start / sidebar-end;
@@ -46,7 +57,26 @@ body {
 
 .features {
   grid-column: center-start / center-end;
-  background-color: var(--color-grey-light-2); }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  align-items: start;
+  margin: 15rem 0; }
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem; }
+  .feature__icon {
+    grid-row: 1 / span 2;
+    width: 4.5rem;
+    height: 4.5rem;
+    transform: translateY(-1rem);
+    fill: var(--color-primary); }
+  .feature__text {
+    grid-column: 2 / -1;
+    font-size: 1.7rem; }
 
 .story__pictures {
   grid-column: full-start / col-end 4;
