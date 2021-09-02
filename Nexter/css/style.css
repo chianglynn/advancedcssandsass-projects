@@ -1,11 +1,13 @@
 :root {
   --color-primary: #c69963;
+  --color-primary-rgb: 196, 152, 99;
   --color-primary-dark: #B28451;
   --color-secondary: #101d2c;
   --color-grey-light-1: #f9f7f6;
   --color-grey-light-2: #aaa;
   --color-grey-dark-1: #54483A;
   --color-grey-dark-2: #6D5D4B;
+  --color-white: #fff;
   --font-primary: 'Nunito', sans-serif;
   --font-display: 'Josefin Sans', sans-serif; }
 
@@ -35,12 +37,52 @@ body {
   font-family: var(--font-display);
   font-weight: 400; }
 
+.heading-2 {
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1; }
+  .heading-2--light {
+    color: var(--color-grey-light-1); }
+  .heading-2--dark {
+    color: var(--color-grey-dark-1); }
+
+.heading-3 {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  text-transform: uppercase; }
+
 .heading-4 {
   font-size: 1.9rem; }
   .heading-4--light {
     color: var(--color-grey-light-1); }
   .heading-4--dark {
     color: var(--color-grey-dark-1); }
+
+.btn {
+  padding: 1.8rem 3rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 0;
+  transition: all .2s;
+  cursor: pointer; }
+  .btn:hover {
+    background-color: var(--color-primary-dark); }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb-md {
+  margin-bottom: 3rem; }
+
+.mb-lg {
+  margin-bottom: 4rem; }
+
+.mb-hg {
+  margin-bottom: 8rem; }
 
 .sidebar {
   grid-row: 1 / -1;
@@ -80,11 +122,39 @@ body {
 
 .story__pictures {
   grid-column: full-start / col-end 4;
-  background-color: var(--color-primary); }
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  background-color: var(--color-primary);
+  background-image: linear-gradient(rgba(var(--color-primary-rgb), 0.5), rgba(var(--color-primary-rgb), 0.5)), url(../img/back.jpg);
+  background-size: cover; }
+
+.story__img--1 {
+  grid-row: 2 / -2;
+  grid-column: 2 / -2;
+  width: 100%;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1); }
+
+.story__img--2 {
+  grid-row: 4 / -2;
+  grid-column: 4 / -1;
+  width: 115%;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  z-index: 1; }
 
 .story__content {
   grid-column: col-start 5 / full-end;
+  display: grid;
+  justify-items: flex-start;
+  align-content: center;
+  padding: 6rem 8vw;
   background-color: var(--color-grey-light-1); }
+
+.story__text {
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+  font-style: italic; }
 
 .homes {
   grid-column: center-start / center-end;

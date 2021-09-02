@@ -1,6 +1,7 @@
 :root {
     // Colors
     --color-primary     : #c69963;
+    --color-primary-rgb : 196, 152, 99;
     --color-primary-dark: #B28451;
 
     --color-secondary: #101d2c;
@@ -11,10 +12,14 @@
     --color-grey-dark-1: #54483A;
     --color-grey-dark-2: #6D5D4B;
 
+    --color-white: #fff;
+
     // Font-family
     --font-primary: 'Nunito', sans-serif;
     --font-display: 'Josefin Sans', sans-serif;
 }
+
+$color-primary: #c69963;
 
 *,
 *::before,
