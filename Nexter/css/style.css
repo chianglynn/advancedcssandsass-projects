@@ -8,6 +8,7 @@
   --color-grey-dark-1: #54483A;
   --color-grey-dark-2: #6D5D4B;
   --color-white: #fff;
+  --color-white-rgb: 255, 255, 255;
   --font-primary: 'Nunito', sans-serif;
   --font-display: 'Josefin Sans', sans-serif; }
 
@@ -270,4 +271,32 @@ body {
 
 .footer {
   grid-column: full-start / full-end;
+  padding: 8rem;
   background-color: var(--color-secondary); }
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  align-items: center;
+  list-style: none; }
+  .nav__link:link, .nav__link:visited {
+    display: block;
+    padding: 1.5rem;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--color-white);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s; }
+  .nav__link:hover, .nav__link:active {
+    background-color: rgba(var(--color-white-rgb), 0.05);
+    transform: translateY(-3px); }
+
+.copyright {
+  margin: 6rem auto 0;
+  width: 70%;
+  font-size: 1.4rem;
+  color: var(--color-grey-light-2);
+  text-align: center; }
