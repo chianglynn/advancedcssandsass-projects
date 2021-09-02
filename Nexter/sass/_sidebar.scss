@@ -1,5 +1,35 @@
 .sidebar {
     grid-row        : 1 / -1;
     grid-column     : sidebar-start / sidebar-end;
+    display         : flex;
+    justify-content : center;
     background-color: var(--color-primary);
+}
+
+.nav-btn {
+    position        : relative;
+    margin-top      : 4rem;
+    width           : 4.5rem;
+    height          : 2px;
+    border          : none;
+    border-radius   : 0;
+    background-color: var(--color-white);
+
+    &::before,
+    &::after {
+        content         : '';
+        position        : absolute;
+        left            : 0;
+        width           : 4.5rem;
+        height          : 2px;
+        background-color: var(--color-white);
+    }
+
+    &::before {
+        top: -1.5rem;
+    }
+
+    &::after {
+        top: 1.5rem;
+    }
 }
