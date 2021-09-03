@@ -10,6 +10,11 @@
             linear-gradient(rgba(var(--color-primary-rgb), .5), rgba(var(--color-primary-rgb), .5)),
             url(../img/back.jpg);
         background-size: cover;
+
+        @include respond(medium) {
+            grid-column: full-start / full-end;
+            padding    : 3rem;
+        }
     }
 
     &__img--1 {
@@ -17,6 +22,11 @@
         grid-column: 2 / -2;
         width      : 100%;
         box-shadow : 0 2rem 5rem rgba(0, 0, 0, .1);
+
+        @include respond(medium) {
+            grid-row   : 1 / -1;
+            grid-column: 1 / 5;
+        }
     }
 
     &__img--2 {
@@ -25,6 +35,11 @@
         width      : 115%;
         box-shadow : 0 2rem 5rem rgba(0, 0, 0, .2);
         z-index    : 1;
+
+        @include respond(medium) {
+            grid-row: 1 / -1;
+            width   : 100%;
+        }
     }
 
     &__content {
@@ -38,6 +53,11 @@
         align-content      : center;
         padding            : 6rem 8vw;
         background-color   : var(--color-grey-light-1);
+
+        @include respond(medium) {
+            grid-row   : 5 / 6;
+            grid-column: full-start / full-end;
+        }
     }
 
     &__text {

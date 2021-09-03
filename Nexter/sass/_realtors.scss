@@ -8,12 +8,26 @@
     padding         : 3rem;
     background-color: var(--color-secondary);
 
+    @include respond(medium) {
+        grid-column: full-start / full-end;
+    }
+
     &__list {
         display              : grid;
         grid-template-columns: min-content max-content;
         align-items          : center;
         grid-row-gap         : 5vh;
         grid-column-gap      : 2rem;
+
+        @include respond(medium) {
+            grid-template-columns: repeat(3, min-content max-content);
+            grid-row-gap         : 0;
+        }
+
+        @include respond(small) {
+            grid-template-columns: min-content max-content;
+            grid-row-gap         : 5vh;
+        }
     }
 
     &__img {
